@@ -57,11 +57,14 @@ nblm <- glm.nb(
 )  # Fit multiple negative binomial regression to the data
 summary(nblm)  # Check summary
 
+# Compare AIC to see if the negative binomial model is problematic
+print(paste0("Poisson AIC: ", round(plm$aic))); print(paste0("Neg. binom AIC: ", round(nblm$aic)))
+
 nblm <- glm.nb(
     df$Eulaema_nigrita ~
     df$effort
-    # + df$altitude
-    # + df$MAT
+    + df$altitude
+    + df$MAT
     + df$MAP
     + df$Tseason
     + df$Pseason
