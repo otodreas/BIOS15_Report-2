@@ -73,6 +73,8 @@ nblm <- glm.nb(
 )  # Drop terms that I do not expect have an important relationship to the response
 plot(nblm)  # Check that residuals are normally distributed
 
+# Note to self: e^slope for each parameter represents the % change in response for one step (+1) in the predictor
+# You can't just plot one line for one set of vars (y=mx+b) you need to do the whole inear function (all the different "mx" terms). keep the other x's at their mean if you really want to.
 
 ## Multicollinearity check
 vars <- list(
