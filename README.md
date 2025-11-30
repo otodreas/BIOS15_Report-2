@@ -7,7 +7,7 @@ The report can be found in plain `.tex` format at `report/main.tex` and as a `.p
 
 Directory structure:
 ```markdown
-root
+root/
 ├── data/
 │   └── Eulaema.csv 
 ├── outputs/
