@@ -1,0 +1,28 @@
+
+Call:
+glm.nb(formula = df$Eulaema_nigrita ~ df$effort + df$MAP + df$Tseason + 
+    df$Pseason, init.theta = 1.026966372, link = log)
+
+Coefficients:
+              Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  4.6377515  0.4316965  10.743  < 2e-16 ***
+df$effort    0.4214337  0.0574842   7.331 2.28e-13 ***
+df$MAP      -0.0013762  0.0001991  -6.914 4.73e-12 ***
+df$Tseason  -0.0007911  0.0001538  -5.145 2.68e-07 ***
+df$Pseason   0.0196181  0.0036745   5.339 9.35e-08 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(1.027) family taken to be 1)
+
+    Null deviance: 361.71  on 177  degrees of freedom
+Residual deviance: 206.01  on 173  degrees of freedom
+AIC: 1783.4
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  1.027 
+          Std. Err.:  0.105 
+
+ 2 x log-likelihood:  -1771.449 
