@@ -4,12 +4,18 @@ glm.nb(formula = df$Eulaema_nigrita ~ df$effort + df$MAP + df$Tseason +
     df$Pseason, init.theta = 1.026966372, link = log)
 
 Coefficients:
-              Estimate Std. Error z value
-(Intercept)  4.6377515  0.4316965  10.743
-df$effort    0.4214337  0.0574842   7.331
-df$MAP      -0.0013762  0.0001991  -6.914
-df$Tseason  -0.0007911  0.0001538  -5.145
-df$Pseason   0.0196181  0.0036745   5.339
+              Estimate
+(Intercept)  4.6377515
+df$effort    0.4214337
+df$MAP      -0.0013762
+df$Tseason  -0.0007911
+df$Pseason   0.0196181
+            Std. Error z value
+(Intercept)  0.4316965  10.743
+df$effort    0.0574842   7.331
+df$MAP       0.0001991  -6.914
+df$Tseason   0.0001538  -5.145
+df$Pseason   0.0036745   5.339
             Pr(>|z|)    
 (Intercept)  < 2e-16 ***
 df$effort   2.28e-13 ***
@@ -18,7 +24,8 @@ df$Tseason  2.68e-07 ***
 df$Pseason  9.35e-08 ***
 ---
 Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’
+  0.05 ‘.’ 0.1 ‘ ’ 1
 
 (Dispersion parameter for Negative Binomial(1.027) family taken to be 1)
 

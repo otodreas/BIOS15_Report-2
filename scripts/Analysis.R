@@ -14,9 +14,9 @@ df <- read.csv(here("data", "Eulaema.csv"))
 
 
 ## Initial tests and model fitting
-c(head(
+cat(c(head(
     unique(df$Eulaema_nigrita), 10), tail(unique(df$Eulaema_nigrita), 10
-))  # Show top and bottom 10 unique entries
+)))  # Show top and bottom 10 unique entries
 
 hist(df$Eulaema_nigrita)  # Plot histogram of response variable
 
@@ -28,8 +28,9 @@ lm <- lm(
     + df$Tseason
     + df$Pseason
 )  # Fit simple linear model for all numerical predictors
-
 hist(lm$residuals)  # Show distribution of residuals
+par(mfrow = c(2, 2))
+plot(lm)
 
 plm <- glm(
     df$Eulaema_nigrita
@@ -39,7 +40,7 @@ plm <- glm(
     + df$Tseason
     + df$Pseason
 )  # Fit multiple poisson regression model
-plm$deviance / plm$df.residual  # Check if data exhibit overdispersion
+cat(plm$deviance / plm$df.residual)  # Check if data exhibit overdispersion
 
 nblm <- glm.nb(
     df$Eulaema_nigrita ~
@@ -65,6 +66,7 @@ nblm <- glm.nb(
     + df$Tseason
     + df$Pseason
 )
+par(mfrow = c(2, 2))
 plot(nblm)  # Check that residuals are normally distributed
 
 
